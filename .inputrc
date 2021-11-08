@@ -1,0 +1,58 @@
+# Use `sed -n l` to debug keycodes
+# Use `infocmp -L1` to see the terminal keymap
+# See `bind -V` for values and `bind -p` for function bindings
+
+# Alt+Left/Right to move by whole words
+"\e[1;9C": forward-word
+"\e[1;9D": backward-word
+
+# Up/Down for searching command history
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Alt+Del(fn+BackSpace) to remove the word following the cursor
+"\e[3~": kill-word
+
+# Alt+Z for undo
+"\ez": undo
+
+# Ctrl+L to Clear Screen
+"\C-L": clear-screen
+
+
+# Allow UTF-8 input and output, instead of showing them like $'\0123\0456'.
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Try to stay at the same the cursor position when moving through the history.
+set history-preserve-point on
+
+# Make Tab autocompletion case-insensitive (cd ~/dow<Tab> => cd ~/Downloads/).
+set completion-ignore-case On
+# Be more intelligent when autocompleting by looking at text after the cursor
+set skip-completed-text on
+set colored-completion-prefix on
+
+# When autocompleting symlinks to directories, immediately add a trailing "/".
+set mark-symlinked-directories on
+# Do not expand "~" to the home directory when completing. (The actual value
+# passed on to the command still is expanded, though. Which is good.) "Off" is
+# the default value, but some servers override this, so I override the override.
+set expand-tilde off
+# autocomplete hidden files ("dot files") even when the prefix does not begin with a dot
+set match-hidden-files on
+
+# Show all autocomplete results at once.
+set page-completions off
+# If there are more than 100 possible completions for a word, ask to show all
+set completion-query-items 100
+
+# Immediately show all possible completions.
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+
+# Show extra file information when completing, like ls -F does.
+set visible-stats on
+set colored-stats on
+
