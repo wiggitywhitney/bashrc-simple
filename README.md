@@ -10,7 +10,7 @@ of zsh or fish.
 
 ## install /w git
 ```shell
-git clone https://github.com/stealthybox/bashrc-simple
+git clone https://github.com/wiggitywhitney/bashrc-simple
 ( cd bashrc-simple; ./link.sh )
 # any files that are overridden will be backed up as ${file}.old
 # open another terminal, check for any problems
@@ -32,7 +32,7 @@ ________
 
 ## install /w wget
 ```shell
-wget https://github.com/stealthybox/bashrc-simple/archive/refs/heads/main.zip
+wget https://github.com/wiggitywhitney/bashrc-simple/archive/refs/heads/main.zip
 unzip main.zip
 \rm main.zip
 ( cd bashrc-simple-main; ./link.sh )
@@ -40,7 +40,7 @@ unzip main.zip
 
 ## install /w curl
 ```shell
-curl -Lo main.zip https://github.com/stealthybox/bashrc-simple/archive/refs/heads/main.zip
+curl -Lo main.zip https://github.com/wiggitywhitney/bashrc-simple/archive/refs/heads/main.zip
 unzip main.zip
 \rm main.zip
 ( cd bashrc-simple-main; ./link.sh )
