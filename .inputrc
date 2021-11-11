@@ -2,19 +2,19 @@
 # Use `infocmp -L1` to see the terminal keymap
 # See `bind -V` for values and `bind -p` for function bindings
 
-# Alt+Left/Right to move by whole words
-"\e[1;9C": forward-word
-"\e[1;9D": backward-word
+# Option + Arrows to jump words.
+"\e\e[C": forward-word
+"\e\e[D": backward-word
 
 # Up/Down for searching command history
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 
 # Alt+Del(fn+BackSpace) to remove the word following the cursor
-"\e[3~": kill-word
+"\e\e[3~": kill-word
 
 # Alt+Z for undo
-"\ez": undo
+"\e\ez": undo
 
 # Ctrl+L to Clear Screen
 "\C-L": clear-screen
